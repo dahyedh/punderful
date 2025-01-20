@@ -1,0 +1,45 @@
+@keyframes fallAnimation {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+}
+
+.emoji-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.emoji-wrapper {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.emoji {
+  will-change: transform;
+  animation-timing-function: ease-in-out;
+}
